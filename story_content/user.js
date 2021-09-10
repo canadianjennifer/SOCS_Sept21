@@ -2,25 +2,37 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6GnwbTF57bP":
+      case "6MIEE0FVS76":
         Script1();
         break;
-      case "6eiFoFDHQJj":
+      case "6mkZ8T5p8yW":
         Script2();
         break;
-      case "6eCddI9i3Y8":
+      case "5awdZhxPjws":
         Script3();
         break;
-      case "6HJIag94U8w":
+      case "5uCcJcw3JY1":
         Script4();
         break;
-      case "6o0jBsdKypL":
+      case "6jZOZMbIn85":
         Script5();
         break;
   }
 }
 
 function Script1()
+{
+  var player = GetPlayer();
+this.Location= player.GetVar("location");
+this.audioFile = player.GetVar("audioFile");
+var audio = document.getElementById('bgSong');
+audio.src=Location + audioFile;
+audio.load();
+
+
+}
+
+function Script2()
 {
   var player = GetPlayer();
 
@@ -43,18 +55,6 @@ if(document.getElementById('bgSong')==null){
 	audio.volume = 0.5;
 	player.SetVar("javascriptsLoaded",true)
 }
-}
-
-function Script2()
-{
-  var player = GetPlayer();
-this.Location= player.GetVar("location");
-this.audioFile = player.GetVar("audioFile");
-var audio = document.getElementById('bgSong');
-audio.src=Location + audioFile;
-audio.load();
-
-
 }
 
 function Script3()
