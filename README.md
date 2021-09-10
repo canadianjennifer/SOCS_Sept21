@@ -1,2 +1,0 @@
-# SOCS_Sept21
- SOCS_Sept21
