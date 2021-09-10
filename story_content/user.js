@@ -2,20 +2,23 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6MIEE0FVS76":
+      case "5yK2WCJo4Wu":
         Script1();
         break;
-      case "6mkZ8T5p8yW":
+      case "6qR48lOPq6v":
         Script2();
         break;
-      case "5awdZhxPjws":
+      case "6gzIXh5PHwb":
         Script3();
         break;
-      case "5uCcJcw3JY1":
+      case "68AYHroAgw1":
         Script4();
         break;
-      case "6jZOZMbIn85":
+      case "6k0qV2rralk":
         Script5();
+        break;
+      case "6XDxH16nU9o":
+        Script6();
         break;
   }
 }
@@ -33,6 +36,17 @@ audio.load();
 }
 
 function Script2()
+{
+  var player = GetPlayer();
+this.Location= player.GetVar("location");
+this.audioFile = player.GetVar("audioFile");
+var audio = document.getElementById('bgSong');
+audio.src=Location + audioFile;
+audio.pause();
+audio.currentTime = 0;
+}
+
+function Script3()
 {
   var player = GetPlayer();
 
@@ -57,7 +71,7 @@ if(document.getElementById('bgSong')==null){
 }
 }
 
-function Script3()
+function Script4()
 {
   var player = GetPlayer();
 this.Location= player.GetVar("location");
@@ -68,7 +82,7 @@ audio.load();
 audio.play();
 }
 
-function Script4()
+function Script5()
 {
   var player = GetPlayer();
 
@@ -87,7 +101,7 @@ request.open('POST', 'https://script.google.com/macros/s/AKfycbwH9MKCIq73QMCT3eI
 request.send(formData);
 }
 
-function Script5()
+function Script6()
 {
   var player = GetPlayer();
 
